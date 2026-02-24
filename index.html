@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHBZ Agency</title>
+<meta name="description" content="SHBZ Agency accompagne créateurs et marques ambitieuses dans la structuration, la monétisation et l’expansion stratégique de leur présence digitale.">
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
+</head>
+<body>
+
+<!-- Arrière-plan animé -->
+<canvas id="backgroundCanvas"></canvas>
+
+<header class="header fade">
+  <div class="container header-flex">
+    <div class="logo">SHBZ AGENCY</div>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Avis</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="burger" aria-label="Ouvrir le menu mobile">☰</button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
+    <a href="#">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#reviews">Avis</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero fade">
+  <div class="container hero-flex">
+    <div class="hero-text">
+      <h1>Nous transformons votre influence<br>en véritable levier de croissance</h1>
+      <p>SHBZ Agency accompagne créateurs et marques ambitieuses dans la structuration, la monétisation et l’expansion stratégique de leur présence digitale.</p>
+      <button class="btn" onclick="openAuditPopup()">Planifier mon audit stratégique</button>
+      <div class="hero-proof">+120 collaborations • 98% de satisfaction • Croissance mesurable</div>
+    </div>
+    <div class="hero-image">
+      <img src="image.webp" alt="Réunion stratégique SHBZ Agency">
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats fade">
+  <div class="container stats-flex">
+    <div><h3>+120</h3><p>Collaborations</p></div>
+    <div><h3>+3M</h3><p>Audience cumulée</p></div>
+    <div><h3>98%</h3><p>Clients satisfaits</p></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services fade" id="services">
+  <div class="container services-flex">
+    <div class="service-card">
+      <h3>Gestion d’influenceurs</h3>
+      <p>Matching stratégique avec des créateurs qualifiés.</p>
+    </div>
+    <div class="service-card">
+      <h3>Campagnes premium</h3>
+      <p>Création de contenu haute performance.</p>
+    </div>
+    <div class="service-card">
+      <h3>Stratégie digitale</h3>
+      <p>Positionnement & croissance long terme.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews fade" id="reviews">
+  <div class="container reviews-flex">
+    <div class="review">
+      <img src="image_sacko_camara.webp" alt="Sacko Camara témoigne">
+      <p>"Notre visibilité a explosé."</p>
+      <strong>Sacko Camara</strong>
+    </div>
+    <div class="review">
+      <img src="image_lybro.webp" alt="Lybro témoigne">
+      <p>"Une vraie révolution digitale."</p>
+      <strong>Lybro Le Saiyan</strong>
+    </div>
+    <div class="review">
+      <img src="image_junior_bendo.webp" alt="Junior Bendo témoigne">
+      <p>"Collaboration efficace et professionnelle."</p>
+      <strong>Junior Bendo</strong>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta fade">
+  <div class="container">
+    <h2>Prêt à passer au niveau supérieur ?</h2>
+    <a class="btn white" href="https://app.cal.eu/shbz-agency" target="_blank">Planifier un appel</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section fade" id="contact">
+  <div class="container contact-container">
+    <div class="contact-left contact-card">
+      <h2>Contact</h2>
+      <p><strong>Contactez-nous dès maintenant</strong> pour proposer une collaboration ou obtenir un accompagnement stratégique sur mesure.</p>
+      <div class="info-item"><i class="fa-solid fa-location-dot"></i><div><h3>SHBZ Agency</h3><p>10 rue de Chaumont, 75019 Paris</p></div></div>
+      <div class="info-item"><i class="fa-solid fa-phone"></i><div><h3>06.72.18.59.46</h3></div></div>
+      <div class="info-item"><i class="fa-regular fa-envelope"></i><div><h3>shbzagency@gmail.com</h3></div></div>
+      <div class="info-item"><i class="fa-brands fa-instagram"></i><div><h3>@shbz_agency</h3></div></div>
+    </div>
+    <div class="contact-right contact-card">
+      <form id="premiumContactForm">
+        <div class="form-group"><label>Nom et prénom / Nom d'artiste</label><input type="text" placeholder="Jean Dupont" required></div>
+        <div class="form-group"><label>Adresse e-mail</label><input type="email" placeholder="email@exemple.com" required></div>
+        <div class="form-group"><label>Message</label><textarea rows="6" placeholder="Votre message..." required></textarea></div>
+        <button type="submit" class="btn btn-contact">Envoyer la demande</button>
+        <div id="formFeedback" class="form-feedback"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer fade">© SHBZ Agency — Tous droits réservés</footer>
+
+<!-- POPUP AUDIT -->
+<div id="auditPopup" class="popup-form" role="dialog" aria-modal="true">
+  <div class="popup-content">
+    <button class="close" onclick="closeAuditPopup()">&times;</button>
+    <div id="auditStep1">
+      <h2>Audit stratégique SHBZ</h2>
+      <form onsubmit="goToStep2(event)">
+        <input type="text" id="name" placeholder="Nom et prénom" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <button type="submit">Continuer</button>
+      </form>
+    </div>
+    <div id="auditStep2" style="display:none;">
+      <h2>Dernière étape 🔥</h2>
+      <iframe src="https://app.cal.eu/shbz-agency" width="100%" height="600" style="border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.1)"></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
