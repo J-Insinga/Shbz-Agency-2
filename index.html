@@ -12,21 +12,22 @@
 </head>
 <body>
 
-<!-- Arrière-plan animé -->
+<!-- CANVAS DE FOND -->
 <canvas id="backgroundCanvas"></canvas>
 
 <header class="header fade">
   <div class="container header-flex">
     <div class="logo">SHBZ AGENCY</div>
-    <nav class="nav" aria-label="Menu principal">
+    <nav class="nav">
       <a href="#">Accueil</a>
       <a href="#services">Services</a>
       <a href="#reviews">Avis</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="burger" aria-label="Ouvrir le menu mobile">☰</button>
+    <button class="burger">☰</button>
   </div>
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
+
+  <nav class="mobile-menu" id="mobileMenu">
     <a href="#">Accueil</a>
     <a href="#services">Services</a>
     <a href="#reviews">Avis</a>
@@ -39,9 +40,9 @@
   <div class="container hero-flex">
     <div class="hero-text">
       <h1>Nous transformons votre influence<br>en véritable levier de croissance</h1>
-      <p>SHBZ Agency accompagne créateurs et marques ambitieuses dans la structuration, la monétisation et l’expansion stratégique de leur présence digitale.</p>
+      <p>SHBZ Agency accompagne créateurs et marques ambitieuses dans la structuration et la monétisation stratégique de leur présence digitale.</p>
       <button class="btn" onclick="openAuditPopup()">Planifier mon audit stratégique</button>
-      <div class="hero-proof">+120 collaborations • 98% de satisfaction • Croissance mesurable</div>
+      <div class="hero-proof">+120 collaborations • 3M+ d’audience cumulée • 98% de satisfaction</div>
     </div>
     <div class="hero-image">
       <img src="image.webp" alt="Réunion stratégique SHBZ Agency">
@@ -108,44 +109,28 @@
 <!-- CONTACT -->
 <section class="contact-section fade" id="contact">
   <div class="container contact-container">
-    <div class="contact-left contact-card">
+    <div class="contact-card">
       <h2>Contact</h2>
-      <p><strong>Contactez-nous dès maintenant</strong> pour proposer une collaboration ou obtenir un accompagnement stratégique sur mesure.</p>
-      <div class="info-item"><i class="fa-solid fa-location-dot"></i><div><h3>SHBZ Agency</h3><p>10 rue de Chaumont, 75019 Paris</p></div></div>
-      <div class="info-item"><i class="fa-solid fa-phone"></i><div><h3>06.72.18.59.46</h3></div></div>
-      <div class="info-item"><i class="fa-regular fa-envelope"></i><div><h3>shbzagency@gmail.com</h3></div></div>
-      <div class="info-item"><i class="fa-brands fa-instagram"></i><div><h3>@shbz_agency</h3></div></div>
-    </div>
-    <div class="contact-right contact-card">
       <form id="premiumContactForm">
-        <div class="form-group"><label>Nom et prénom / Nom d'artiste</label><input type="text" placeholder="Jean Dupont" required></div>
-        <div class="form-group"><label>Adresse e-mail</label><input type="email" placeholder="email@exemple.com" required></div>
-        <div class="form-group"><label>Message</label><textarea rows="6" placeholder="Votre message..." required></textarea></div>
-        <button type="submit" class="btn btn-contact">Envoyer la demande</button>
+        <input type="text" placeholder="Nom" required>
+        <input type="email" placeholder="Email" required>
+        <textarea rows="5" placeholder="Message" required></textarea>
+        <button type="submit" class="btn">Envoyer</button>
         <div id="formFeedback" class="form-feedback"></div>
       </form>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer fade">© SHBZ Agency — Tous droits réservés</footer>
 
 <!-- POPUP AUDIT -->
-<div id="auditPopup" class="popup-form" role="dialog" aria-modal="true">
+<div id="auditPopup" class="popup-form">
   <div class="popup-content">
     <button class="close" onclick="closeAuditPopup()">&times;</button>
-    <div id="auditStep1">
-      <h2>Audit stratégique SHBZ</h2>
-      <form onsubmit="goToStep2(event)">
-        <input type="text" id="name" placeholder="Nom et prénom" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <button type="submit">Continuer</button>
-      </form>
-    </div>
-    <div id="auditStep2" style="display:none;">
-      <h2>Dernière étape 🔥</h2>
-      <iframe src="https://app.cal.eu/shbz-agency" width="100%" height="600" style="border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.1)"></iframe>
-    </div>
+    <h2>Audit stratégique SHBZ</h2>
+    <iframe src="https://app.cal.eu/shbz-agency" width="100%" height="500"></iframe>
   </div>
 </div>
 
