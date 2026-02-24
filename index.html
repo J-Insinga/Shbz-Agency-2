@@ -8,13 +8,12 @@
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
 </head>
 <body>
 
-<!-- CANVAS DE FOND -->
-<canvas id="backgroundCanvas"></canvas>
-
+<!-- HEADER -->
 <header class="header fade">
   <div class="container header-flex">
     <div class="logo">SHBZ AGENCY</div>
@@ -24,9 +23,8 @@
       <a href="#reviews">Avis</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="burger">☰</button>
+    <button class="burger" aria-label="Ouvrir le menu">☰</button>
   </div>
-
   <nav class="mobile-menu" id="mobileMenu">
     <a href="#">Accueil</a>
     <a href="#services">Services</a>
@@ -37,15 +35,16 @@
 
 <!-- HERO -->
 <section class="hero fade">
+  <canvas id="heroCanvas"></canvas>
   <div class="container hero-flex">
     <div class="hero-text">
-      <h1>Nous transformons votre influence<br>en véritable levier de croissance</h1>
+      <h1>Nous transformons votre influence<br>en levier de croissance</h1>
       <p>SHBZ Agency accompagne créateurs et marques ambitieuses dans la structuration et la monétisation stratégique de leur présence digitale.</p>
-      <button class="btn" onclick="openAuditPopup()">Planifier mon audit stratégique</button>
+      <button class="btn hero-cta" onclick="openAuditPopup()" aria-label="Planifier mon audit stratégique">Planifier mon audit</button>
       <div class="hero-proof">+120 collaborations • 3M+ d’audience cumulée • 98% de satisfaction</div>
     </div>
     <div class="hero-image">
-      <img src="image.webp" alt="Réunion stratégique SHBZ Agency">
+      <img src="image.webp" alt="Réunion stratégique SHBZ Agency" loading="lazy">
     </div>
   </div>
 </section>
@@ -61,16 +60,19 @@
 
 <!-- SERVICES -->
 <section class="services fade" id="services">
-  <div class="container services-flex">
+  <div class="container services-slider">
     <div class="service-card">
+      <div class="service-icon">🎯</div>
       <h3>Gestion d’influenceurs</h3>
       <p>Matching stratégique avec des créateurs qualifiés.</p>
     </div>
     <div class="service-card">
+      <div class="service-icon">💡</div>
       <h3>Campagnes premium</h3>
       <p>Création de contenu haute performance.</p>
     </div>
     <div class="service-card">
+      <div class="service-icon">📈</div>
       <h3>Stratégie digitale</h3>
       <p>Positionnement & croissance long terme.</p>
     </div>
@@ -79,19 +81,19 @@
 
 <!-- REVIEWS -->
 <section class="reviews fade" id="reviews">
-  <div class="container reviews-flex">
+  <div class="container reviews-slider">
     <div class="review">
-      <img src="image_sacko_camara.webp" alt="Sacko Camara témoigne">
+      <img src="image_sacko_camara.webp" alt="Sacko Camara témoigne" loading="lazy">
       <p>"Notre visibilité a explosé."</p>
       <strong>Sacko Camara</strong>
     </div>
     <div class="review">
-      <img src="image_lybro.webp" alt="Lybro témoigne">
+      <img src="image_lybro.webp" alt="Lybro témoigne" loading="lazy">
       <p>"Une vraie révolution digitale."</p>
       <strong>Lybro Le Saiyan</strong>
     </div>
     <div class="review">
-      <img src="image_junior_bendo.webp" alt="Junior Bendo témoigne">
+      <img src="image_junior_bendo.webp" alt="Junior Bendo témoigne" loading="lazy">
       <p>"Collaboration efficace et professionnelle."</p>
       <strong>Junior Bendo</strong>
     </div>
@@ -102,7 +104,7 @@
 <section class="cta fade">
   <div class="container">
     <h2>Prêt à passer au niveau supérieur ?</h2>
-    <a class="btn white" href="https://app.cal.eu/shbz-agency" target="_blank">Planifier un appel</a>
+    <a class="btn white" href="https://app.cal.eu/shbz-agency" target="_blank" aria-label="Planifier un appel avec SHBZ Agency">Planifier un appel</a>
   </div>
 </section>
 
@@ -130,7 +132,7 @@
   <div class="popup-content">
     <button class="close" onclick="closeAuditPopup()">&times;</button>
     <h2>Audit stratégique SHBZ</h2>
-    <iframe src="https://app.cal.eu/shbz-agency" width="100%" height="500"></iframe>
+    <iframe src="" width="100%" height="500" loading="lazy"></iframe>
   </div>
 </div>
 
